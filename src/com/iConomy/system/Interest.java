@@ -136,7 +136,7 @@ public class Interest extends TimerTask {
                             }
 
                             if(percentage) {
-                                amount = Math.round((Constants.InterestPercentage * balance)/100);
+                                amount = Double.valueOf(DecimalFormat.format((Constants.InterestPercentage * balance)/100));
                             }
 
                             ps.setDouble(1, balance+amount);
@@ -187,7 +187,7 @@ public class Interest extends TimerTask {
                             }
 
                             if(percentage) {
-                                amount = Math.round((Constants.InterestPercentage * balance)/100);
+                                amount = Double.valueOf(DecimalFormat.format((Constants.InterestPercentage * balance)/100));
                             }
 
                             ps.setDouble(1, balance+amount);
